@@ -415,7 +415,7 @@ yourself when a dashboard alone doesn't explain *why*.
 
         st.markdown(f"**Snapshot — {sel_quarter}** (sorted by Red Flags, high to low)")
         st.dataframe(
-            snap.drop(columns=["Quarter"]).style.applymap(highlight_flags, subset=["Red Flags"]),
+            snap.drop(columns=["Quarter"]).style.map(highlight_flags, subset=["Red Flags"]),
             use_container_width=True, hide_index=True,
         )
 
